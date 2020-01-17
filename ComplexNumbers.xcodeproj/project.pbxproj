@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		770B934423D1FE37005D8915 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 770B934323D1FE37005D8915 /* main.cpp */; };
+		770B934E23D1FE57005D8915 /* ComplexNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 770B934C23D1FE57005D8915 /* ComplexNumber.cpp */; };
+		770B935623D203B1005D8915 /* ComplexNumberTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 770B935523D203B1005D8915 /* ComplexNumberTests.m */; };
+		770B935B23D203BD005D8915 /* ComplexNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 770B934C23D1FE57005D8915 /* ComplexNumber.cpp */; };
+		77E36EAB23D21A8B00F6BAC1 /* NSExceptionWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E36EAA23D21A8A00F6BAC1 /* NSExceptionWrapper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +29,24 @@
 /* Begin PBXFileReference section */
 		770B934023D1FE37005D8915 /* ComplexNumbers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ComplexNumbers; sourceTree = BUILT_PRODUCTS_DIR; };
 		770B934323D1FE37005D8915 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		770B934C23D1FE57005D8915 /* ComplexNumber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ComplexNumber.cpp; sourceTree = "<group>"; };
+		770B934D23D1FE57005D8915 /* ComplexNumber.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComplexNumber.hpp; sourceTree = "<group>"; };
+		770B935323D203B1005D8915 /* ComplexNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComplexNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		770B935523D203B1005D8915 /* ComplexNumberTests.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = ComplexNumberTests.m; sourceTree = "<group>"; };
+		770B935723D203B1005D8915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77E36EAA23D21A8A00F6BAC1 /* NSExceptionWrapper.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; path = NSExceptionWrapper.m; sourceTree = "<group>"; };
+		77E36EAC23D21C6500F6BAC1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		770B933D23D1FE37005D8915 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		770B935023D203B1005D8915 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +59,9 @@
 		770B933723D1FE37005D8915 = {
 			isa = PBXGroup;
 			children = (
+				77E36EAC23D21C6500F6BAC1 /* README.md */,
 				770B934223D1FE37005D8915 /* ComplexNumbers */,
+				770B935423D203B1005D8915 /* ComplexNumberTests */,
 				770B934123D1FE37005D8915 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				770B934023D1FE37005D8915 /* ComplexNumbers */,
+				770B935323D203B1005D8915 /* ComplexNumberTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +78,37 @@
 		770B934223D1FE37005D8915 /* ComplexNumbers */ = {
 			isa = PBXGroup;
 			children = (
+				770B934B23D1FE44005D8915 /* src */,
+				770B934A23D1FE3D005D8915 /* include */,
 				770B934323D1FE37005D8915 /* main.cpp */,
 			);
 			path = ComplexNumbers;
+			sourceTree = "<group>";
+		};
+		770B934A23D1FE3D005D8915 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				770B934D23D1FE57005D8915 /* ComplexNumber.hpp */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		770B934B23D1FE44005D8915 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				770B934C23D1FE57005D8915 /* ComplexNumber.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		770B935423D203B1005D8915 /* ComplexNumberTests */ = {
+			isa = PBXGroup;
+			children = (
+				77E36EAA23D21A8A00F6BAC1 /* NSExceptionWrapper.m */,
+				770B935523D203B1005D8915 /* ComplexNumberTests.m */,
+				770B935723D203B1005D8915 /* Info.plist */,
+			);
+			path = ComplexNumberTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +131,23 @@
 			productReference = 770B934023D1FE37005D8915 /* ComplexNumbers */;
 			productType = "com.apple.product-type.tool";
 		};
+		770B935223D203B1005D8915 /* ComplexNumberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 770B935823D203B1005D8915 /* Build configuration list for PBXNativeTarget "ComplexNumberTests" */;
+			buildPhases = (
+				770B934F23D203B1005D8915 /* Sources */,
+				770B935023D203B1005D8915 /* Frameworks */,
+				770B935123D203B1005D8915 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ComplexNumberTests;
+			productName = ComplexNumberTests;
+			productReference = 770B935323D203B1005D8915 /* ComplexNumberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +158,9 @@
 				ORGANIZATIONNAME = "Eduard Dzhumagaliev";
 				TargetAttributes = {
 					770B933F23D1FE37005D8915 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					770B935223D203B1005D8915 = {
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
@@ -110,9 +179,20 @@
 			projectRoot = "";
 			targets = (
 				770B933F23D1FE37005D8915 /* ComplexNumbers */,
+				770B935223D203B1005D8915 /* ComplexNumberTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		770B935123D203B1005D8915 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		770B933C23D1FE37005D8915 /* Sources */ = {
@@ -120,6 +200,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				770B934423D1FE37005D8915 /* main.cpp in Sources */,
+				770B934E23D1FE57005D8915 /* ComplexNumber.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		770B934F23D203B1005D8915 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				770B935623D203B1005D8915 /* ComplexNumberTests.m in Sources */,
+				77E36EAB23D21A8B00F6BAC1 /* NSExceptionWrapper.m in Sources */,
+				770B935B23D203BD005D8915 /* ComplexNumber.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +346,40 @@
 			};
 			name = Release;
 		};
+		770B935923D203B1005D8915 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HA8PQ78LFS;
+				INFOPLIST_FILE = ComplexNumberTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = terriblegoodday.ComplexNumberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		770B935A23D203B1005D8915 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = HA8PQ78LFS;
+				INFOPLIST_FILE = ComplexNumberTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = terriblegoodday.ComplexNumberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -272,6 +397,15 @@
 			buildConfigurations = (
 				770B934823D1FE37005D8915 /* Debug */,
 				770B934923D1FE37005D8915 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		770B935823D203B1005D8915 /* Build configuration list for PBXNativeTarget "ComplexNumberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				770B935923D203B1005D8915 /* Debug */,
+				770B935A23D203B1005D8915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
